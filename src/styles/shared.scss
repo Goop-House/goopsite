@@ -1,0 +1,32 @@
+/* shared.scss */
+
+/*layout variables */
+$header-size: clamp(1rem, #{1rem} + #{1vw}, 6vh);
+$footer-size: clamp(1rem, #{1rem} + #{0.25vw}, 1vh);
+
+/*styling variables*/
+$container-padding: 10px;
+$slide-extra-slow: 1.5s ease;
+$slide-slow: 0.75s ease;
+$slide-mid: 0.5s ease;
+$slide-fast: 0.15s ease;
+
+/*color variables*/
+$mid-grey: #999999;
+$background-color: #000000;
+$foreground-color: #ffffff;
+
+/*font variables*/
+$serif: 'EB Garamond', serif;
+$sans-serif: 'Open Sans','Roboto', 'Oxygen', 'Helvetica Neue', sans-serif;
+$title: $serif;
+$code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+$type-scale: 1.2rem;
+
+
+@mixin flex($vertical-alignment, $horizontal-justify, $wrap)  {
+  display: flex;
+  flex-wrap: #{$wrap};
+  align-items: #{$vertical-alignment};
+  justify-content: #{$horizontal-justify};
+}

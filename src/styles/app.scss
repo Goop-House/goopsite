@@ -1,0 +1,49 @@
+/* app.scss */
+@import './shared.scss';
+@import './themes.scss';
+@import './theming.scss';
+@import '';
+
+.app {
+  font-family: $serif;
+  height: 100vh;
+  width: 100vw;
+
+  @include flex(stretch, space-evenly, nowrap);
+
+  @include themify($themes){
+    background-color: themed('background');
+    color: themed('foreground'); 
+  }
+  transition: background-color #{$slide-slow}, color #{$slide-fast};
+  
+  code {
+    font-family: $code;
+  }
+  
+  .clear-floating::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .center-panel {
+    @media screen and (min-width: 992px) {
+      width: 50%
+    }
+
+    @media screen and (max-width: 992px) {
+      width: 75%
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 100%
+    }
+
+    transition: width #{$slide-slow};
+    padding: 1%;
+    @include themify($themes){
+      border: 1px solid themed('foreground');
+    }
+  }
+}

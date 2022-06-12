@@ -1,0 +1,54 @@
+$themes: (
+  light: (
+    background: #ffffff,
+    foreground: #000000,
+    foregroundHover: #65b4eb,
+    highlight0: #c9425d,
+    highlight1: #4283c9,
+    highlight2: #53a662,
+    highlight3: #c79740,
+    highlight4: #714cba,
+    highlight5: #32819a,
+    highlight6: #cf6142,
+    highlight7: #c45297
+  ),
+  dark: (
+    background: #000000,
+    foreground: #ffffff,
+    foregroundHover: #d6d6d6,
+    highlight0: #c9425d,
+    highlight1: #4283c9,
+    highlight2: #53a662,
+    highlight3: #c79740,
+    highlight4: #714cba,
+    highlight5: #32819a,
+    highlight6: #cf6142,
+    highlight7: #c45297
+  ),
+  parchment: (
+    background: #f8f4ec,
+    foreground: #a52a2a,
+    foregroundHover: #c94e4e,
+    highlight0: #A52A2A,
+    highlight1: #20437D,
+    highlight2: #15715B,
+    highlight3: #A15D14,
+    highlight4: #5C2DA2,
+    highlight5: #1A6279,
+    highlight6: #984C19,
+    highlight7: #A7319E
+  ),
+  low-light: (
+    background: #000000,
+    foreground: #696969,
+    foregroundHover: #888888,
+    highlight0: #2E0C13,
+    highlight1: #0B182C,
+    highlight2: #0E2720,
+    highlight3: #2A2107,
+    highlight4: #1C0E2A,
+    highlight5: #061D20,
+    highlight6: #32130B,
+    highlight7: #321124
+  )
+);
