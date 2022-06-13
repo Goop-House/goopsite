@@ -1,8 +1,6 @@
-/* app.scss */
 @import './shared.scss';
 @import './themes.scss';
 @import './theming.scss';
-@import '';
 
 .app {
   font-family: $serif;
@@ -42,8 +40,68 @@
 
     transition: width #{$slide-slow};
     padding: 1%;
-    @include themify($themes){
-      border: 1px solid themed('foreground');
+  }
+
+
+  .title {
+    width: 100%;
+  }
+
+  .title-image {
+    width: 30%;
+    height: auto;
+  }
+  
+  .about {
+    width: 95%;
+  }
+
+  .navigation-images .container{
+    position: relative;
+    width: 25%;
+
+    & p {
+      position: absolute;
+      top: 50%;
+      opacity: 0;
+      transition: opacity #{$slide-slow};
+    }
+
+    & img {
+      width: 98%;
+      height: auto;
+      transition: opacity #{$slide-slow};
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .title-image {
+      width: 30%;
+      height: auto;
+    }
+    .navigation-images {
+      flex-direction: column;
+      & .container {
+        width:100%;
+      }
+      & img {
+        width: 50%;
+      }
+      & p {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .navigation-images .container:hover {
+      & img {
+        opacity: 0;
+      }
+      & p {
+        opacity: 1;
+      }
+    }
+  }
+
 }
