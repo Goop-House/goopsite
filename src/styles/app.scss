@@ -3,6 +3,7 @@
 @import './theming.scss';
 
 .app {
+
   /*set font, scale app container*/
   font-family: $serif;
   width: 100vw;
@@ -43,6 +44,16 @@
     /*smooth transition for width which looks nice but is kinda superfluous and also breaks the textfit for the title which is why its disabled*/
     /*transition: width #{$slide-slow};*/
     padding: 1%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      @include themify($themes){
+        color: themed('foregroundHover'); 
+      }
+    }
   }
 
   /*set up title, title image scaling*/

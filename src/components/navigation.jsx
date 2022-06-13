@@ -12,25 +12,25 @@ const Navigation = (props) => {
                     <div>
                         <a href={props.content.soundcloud}><img src={soundcloud_image}/></a>
                     </div>
-                    <p>SounbCloud</p>
+                    <p><a href={props.content.soundcloud}>SounbCloud</a></p>
                 </div>
                 <div className='container'>
                     <div>  
                         <a href={props.content.discord}><img src={discord_image}/></a>
                     </div>
-                    <p>Discord</p>
+                    <p><a href={props.content.discord}>Discord</a></p>
                 </div>
                 <div className='container'>
                     <div>
                         <a href={props.content.twitch}><img src={twitch_image}/></a>
                     </div>
-                    <p>Twitch</p>
+                    <p><a href={props.content.twitch}>Twitch</a></p>
                 </div>
                 <div className='container'>
                     <div>
                         <a href={props.content.store}><img src={store_image}/></a>
                     </div>
-                    <p>Store</p>
+                    <p><a href={props.content.store}>Store</a></p>
                 </div>
             </div>
         </div>
