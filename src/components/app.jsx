@@ -8,7 +8,7 @@ import '../styles/app.scss';
 
 function App() {
   const [theme, setTheme] = React.useState(1);
-  const themes = ['theme-dark', 'theme-light', 'theme-parchment', 'theme-low-light'];
+  const themes = ['theme-dark', 'theme-light'];
   
   function updateTheme(){
     var nextTheme = (theme + 1) % themes.length;
