@@ -3,28 +3,30 @@
 @import './theming.scss';
 
 .app {
+  /*set font, scale app container*/
   font-family: $serif;
-  height: 100vh;
   width: 100vw;
-
+  
+  /*add flex properties*/
   @include flex(stretch, space-evenly, nowrap);
 
+  /*add themed properties*/
   @include themify($themes){
     background-color: themed('background');
     color: themed('foreground'); 
   }
+
+  /*set transition speed for coloration changes*/
   transition: background-color #{$slide-slow}, color #{$slide-fast};
-  
-  code {
-    font-family: $code;
-  }
-  
+
+  /**/
   .clear-floating::after {
     content: "";
     clear: both;
     display: table;
   }
 
+  /*setup scaling for various screen sizes*/
   .center-panel {
     @media screen and (min-width: 992px) {
       width: 50%
@@ -38,11 +40,12 @@
       width: 100%
     }
 
-    transition: width #{$slide-slow};
+    /*smooth transition for width which looks nice but is kinda superfluous and also breaks the textfit for the title which is why its disabled*/
+    /*transition: width #{$slide-slow};*/
     padding: 1%;
   }
 
-
+  /*set up title, title image scaling*/
   .title {
     width: 100%;
   }
@@ -52,10 +55,12 @@
     height: auto;
   }
   
+  /*set up about scaling, we want it to be slightly thinner than the title*/
   .about {
     width: 95%;
   }
 
+  /*setting up scaling for the nav images and positioning nonsense so that the links can be in the same place as the images*/
   .navigation-images .container{
     position: relative;
     width: 25%;
@@ -74,25 +79,31 @@
     }
   }
 
+  /*rescaling and formatting nav for mobile and making the text of the links go away*/
   @media screen and (max-width: 600px) {
     .title-image {
       width: 30%;
       height: auto;
     }
+
     .navigation-images {
       flex-direction: column;
+
       & .container {
         width:100%;
+
+        & div {
+          width: 50%;
+        }
       }
-      & img {
-        width: 50%;
-      }
+
       & p {
         display: none;
       }
     }
   }
 
+  /*add hover effect for desktop*/
   @media screen and (min-width: 600px) {
     .navigation-images .container:hover {
       & img {
