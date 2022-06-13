@@ -1,15 +1,14 @@
-// app.js
-// Notes: Wrapping app in a secondary div for theming is redundant, but it's the simplest fix for the current theming implementation. Maybe restructure later?
-
 import React from 'react';
-import Header from './header';
 import About from './about';
-import Title from './title';
+import Navigation from './navigation';
+import Textfit from 'react-textfit';
+import title_image from '../assets/title_image.png';
+import Content from '../assets/content.json';
 import '../styles/app.scss';
 
 function App() {
   const [theme, setTheme] = React.useState(1);
-  const themes = ['theme-dark', 'theme-light', 'theme-parchment', 'theme-low-light'];
+  const themes = ['theme-dark', 'theme-light'];
   
   function updateTheme(){
     var nextTheme = (theme + 1) % themes.length;
@@ -19,12 +18,15 @@ function App() {
   return (
     <div className={themes[theme]}>
       <div className='panels-flex app'>
-        <div className='center-panel'><Title/><About changeTheme={updateTheme} /></div>
+        <div className='center-panel'>
+          <div><Textfit mode="single">{Content.heading}</Textfit></div>
+          <div className='container'><img className='title-image' src={title_image}/></div>
+          <div className='container'><About changeTheme={updateTheme} /></div>
+          <div className='container'><Navigation content={Content}/></div>
+        </div>
       </div>
     </div>
   );
 }
 
 export default App;
-
-

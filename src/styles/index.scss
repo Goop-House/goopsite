@@ -1,7 +1,6 @@
-/* index.scss */
-
 @import './shared.scss';
 
+/*set up basic stuff*/
 html {
   box-sizing: border-box;
 }
@@ -24,11 +23,6 @@ strong {
 
 p {
   font-size: 1.15em;
-}
-
-h1 {
-  font-weight: 500;
-  font-size: clamp(1.2rem, #{1.2rem} + #{3vw}, 6vh);
 }
 
 .flex {
