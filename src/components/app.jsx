@@ -1,12 +1,13 @@
 import React from 'react';
 import About from './about';
 import Navigation from './navigation';
+import LittleGuy from './little';
 import Textfit from 'react-textfit';
 import title_image from '../assets/title_image.png';
 import Content from '../assets/content.json';
 import '../styles/app.scss';
 
-function App() {
+const App = () => {
   const [theme, setTheme] = React.useState(1);
   const themes = ['theme-dark', 'theme-light'];
   
@@ -25,6 +26,7 @@ function App() {
           <div className='container'><Navigation content={Content}/></div>
         </div>
       </div>
+      <LittleGuy/>
     </div>
   );
 }

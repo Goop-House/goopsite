@@ -1,6 +1,6 @@
 import React from 'react';
 
-function About(props){
+const About = (props) => {
     return (
         <div className='about'>
            <p>
@@ -9,12 +9,10 @@ function About(props){
                 a song based on a piece of <span onClick={props.changeTheme}>visual</span> art.
             </p>
             <p>
-                Creating art from art, as trees host the birth of brilliantly colored fungi; what a delightful world us artists live in.
+                Creating art from art, as trees host the birth of brilliantly colored fungi; what a delightful world we artists live in.
             </p>
         </div>
     );
 }
 
 export default About;
-
-

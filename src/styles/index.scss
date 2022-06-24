@@ -1,4 +1,5 @@
 @import './shared.scss';
+@import 'theming.scss';
 
 /*set up basic stuff*/
 html {
@@ -42,3 +43,19 @@ p {
     user-select: none;
 }
 
+/*dont worry about it*/
+.shhh > * {
+  fill: #FFFFFF44;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: auto;
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .shhh {
+    display: none;
+  }
+}
