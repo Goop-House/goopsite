@@ -7,6 +7,7 @@
   /*set font, scale app container*/
   font-family: $serif;
   width: 100vw;
+  height: 100vh;
   
   /*add flex properties*/
   @include flex(stretch, space-evenly, nowrap);
@@ -62,6 +63,7 @@
   }
 
   .title-image {
+    mix-blend-mode: add;
     width: 30%;
     height: auto;
   }
