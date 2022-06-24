@@ -12,7 +12,7 @@ const Navigation = (props) => {
                     <div>
                         <a href={props.content.soundcloud}><img src={soundcloud_image}/></a>
                     </div>
-                    <p><a href={props.content.soundcloud}>SounbCloud</a></p>
+                    <p><a href={props.content.soundcloud}>SoundCloud</a></p>
                 </div>
                 <div className='container'>
                     <div>  
