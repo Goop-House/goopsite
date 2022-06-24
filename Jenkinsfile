@@ -42,6 +42,6 @@ node{
 
     }
     stage('Notify Webhooks'){
-        discordSend description: 'Jenkins Pipeline Build', enableArtifactsList: false, footer: "Build #${env.BUILD_NUMBER} ${currentBuild.currentResult}", image: '', link: env.BUILD_URL, result: currentBuild.currentResult, scmWebUrl: '', showChangeset: true, thumbnail: 'https://a.slack-edge.com/80588/img/services/jenkins-ci_512.png', title: env.JOB_NAME, webhookURL: 'placeholder'
+        discordSend description: 'Jenkins Pipeline Build', enableArtifactsList: false, footer: "Build #${env.BUILD_NUMBER} ${currentBuild.currentResult}", image: '', link: env.BUILD_URL, result: currentBuild.currentResult, scmWebUrl: '', showChangeset: true, thumbnail: 'https://a.slack-edge.com/80588/img/services/jenkins-ci_512.png', title: env.JOB_NAME, webhookURL: 'https://discord.com/api/webhooks/989633552465420298/CtGVNsCO55V45roE35t8KydWlX6srjKD37G_P1IfabvBjTRaDjO9zHemMQ5rOZw9l9TN'
     }
 }
