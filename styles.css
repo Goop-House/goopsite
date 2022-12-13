@@ -1,0 +1,12 @@
+
+body{
+    overflow-x:hidden;
+}
+
+div.container {
+      display:inline-block;
+    }
+
+    p {
+      text-align:center;
+    }
