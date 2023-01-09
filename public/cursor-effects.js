@@ -24,6 +24,16 @@
     function init() {
         bindEvents();
         loop();
+
+        const waterfall = document.getElementById('emoticon-watefall');
+
+        // waterfall
+        setInterval(() => {
+            const x = waterfall.offsetLeft + Math.random() * waterfall.offsetWidth;
+            const y = waterfall.offsetTop + 20 + Math.random() * (waterfall.offsetHeight * 0.7);
+
+            addParticle(x, y, possibleEmoji[Math.floor(Math.random() * possibleEmoji.length)]);
+        }, 50);
     }
 
     // Bind events that are needed
@@ -97,7 +107,7 @@
             "display": "block",
             "pointerEvents": "none",
             "z-index": "100000",
-            "fontSize": "16px",
+            "fontSize": "1rem",
             "will-change": "transform",
             color: "black",
         };
@@ -128,8 +138,8 @@
             this.lifeSpan--;
 
             this.element.style.transform = "scale(" + (this.lifeSpan / 120) + ")";
-          this.element.style.left = this.position.x + 'px';
-          this.element.style.top = this.position.y + 'px';
+            this.element.style.left = this.position.x + 'px';
+            this.element.style.top = this.position.y + 'px';
         };
 
         this.die = function() {

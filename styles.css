@@ -1,12 +1,42 @@
-
-body{
-    overflow-x:hidden;
+body {
+    overflow-x: hidden;
 }
 
 div.container {
-      display:inline-block;
+    display: inline-block;
+}
+
+p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.goop-creature {
+    width: 50vw;
+}
+
+marquee {
+    overflow: hidden;
+}
+
+#emoticon-watefall {
+    height: 30rem;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    body {
+        padding: 2rem;
+    }
+
+    .goop-creature {
+        width: 80vw;
     }
 
     p {
-      text-align:center;
+        font-size: 1.5rem;
     }
+
+    #emoticon-watefall {
+        height: 20rem;
+    }
+}
